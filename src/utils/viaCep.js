@@ -17,6 +17,6 @@ export async function buscarEndereco(cep) {
 
   return {
     ...data,
-    cep: data.cep.replace("-", ""), // Padroniza sem hífen
+    cep: data.cep.replace("-", ""), // sem hífen
   };
 }

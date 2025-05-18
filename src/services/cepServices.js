@@ -41,6 +41,6 @@ export async function processarMensagem(id) {
     });
 
     await registro.save();
-    throw error; // Propaga o erro para tratamento específico no consumer
+    throw error; // para tratamento específico no consumer
   }
 }

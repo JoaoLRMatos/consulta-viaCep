@@ -4,7 +4,7 @@ import connection from "../db/connection.js";
 
 async function startConsumer() {
   try {
-    await connection(); // Aguarda a conexão ser estabelecida
+    await connection(); // Connexão com o DB
     console.log("Consumidor iniciado. Aguardando mensagens da fila...");
 
     while (true) {
