@@ -19,6 +19,7 @@ export async function processarMensagem(id) {
 
     registro.set({
       status: "CONCLUIDO",
+      data: dadosCep,
       logradouro: dadosCep.logradouro,
       complemento: dadosCep.complemento,
       bairro: dadosCep.bairro,
