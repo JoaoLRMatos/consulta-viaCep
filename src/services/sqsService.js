@@ -16,6 +16,7 @@ const sqsClient = new SQSClient({
 });
 
 async function enviarMensagem(id) {
+  // Envia mensagm para a fila
   try {
     const params = {
       QueueUrl: env.SQS_URL,
@@ -31,6 +32,7 @@ async function enviarMensagem(id) {
 }
 
 async function receberMensagens() {
+  // Recebe a mensagem da fila
   try {
     const params = {
       QueueUrl: env.SQS_URL,
@@ -48,6 +50,7 @@ async function receberMensagens() {
 }
 
 async function deletarMensagem(receiptHandle) {
+  // Deleta a mensagem da fila
   try {
     const params = {
       QueueUrl: env.SQS_URL,
