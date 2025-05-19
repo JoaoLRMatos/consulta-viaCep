@@ -105,20 +105,20 @@ npm test
 1. Subir a API REST (produtor):
 
 ```
-node .\src\index.js
+npm start
 ```
 
 2. Endpoint para enviar CEP para a fila:
 
 ```
-POST /enderecos/producer
+POST /consulta
 Body: { "cep": "01001-000" }
 ```
 
 3. Iniciar o consumidor (processador da fila):
 
 ```
-node consumer.js
+npm consumer
 ```
 
 ## Exemplo de Uso
