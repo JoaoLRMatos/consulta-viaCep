@@ -4,19 +4,19 @@ import { jest } from "@jest/globals";
 
 // Mock dinâmico para viaCep.js
 let viaCep;
-jest.unstable_mockModule("../src/utils/viaCep.js", () => ({
+jest.unstable_mockModule("../src/viaCep/utils/viaCep.js", () => ({
   buscarEndereco: jest.fn(),
 }));
 
 // Imports dependentes do mock
-import Endereco from "../src/models/Endereco.js";
-import * as cepService from "../src/services/cepServices.js";
+import Endereco from "../src/database/models/Endereco.js";
+import * as cepService from "../src/viaCep/services/cepServices.js";
 
 // Setup Mongo em memória
 let mongoServer;
 
 beforeAll(async () => {
-  viaCep = await import("../src/utils/viaCep.js");
+  viaCep = await import("../src/viaCep/utils/viaCep.js");
 
   mongoServer = await MongoMemoryServer.create();
   const uri = mongoServer.getUri();

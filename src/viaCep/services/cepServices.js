@@ -1,4 +1,4 @@
-import Endereco from "../models/Endereco.js";
+import Endereco from "../../database/models/Endereco.js";
 import { buscarEndereco } from "../utils/viaCep.js";
 
 export async function criarRegistro(cep) {

@@ -1,6 +1,6 @@
 import { criarRegistro } from "../services/cepServices.js";
-import { enviarMensagem } from "../services/sqsService.js";
-import Endereco from "../models/Endereco.js";
+import { enviarMensagem } from "../../services/sqsService.js";
+import Endereco from "../../database/models/Endereco.js";
 
 export const processarConsulta = async (req, res) => {
   try {

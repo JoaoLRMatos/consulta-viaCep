@@ -4,7 +4,7 @@ import {
   processarConsulta,
   listarEnderecos,
   deletarMensagem,
-} from "../controllers/cepController.js";
+} from "../../controllers/cepController.js";
 
 router.post("/consulta", processarConsulta);
 router.get("/enderecos", listarEnderecos);
